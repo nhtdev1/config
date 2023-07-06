@@ -4,7 +4,6 @@ server:
 eureka:
   instance:
     prefer-ip-address: true
-    instance-id: localhost:${server.port}
   client:
     register-with-eureka: true
     fetch-registry: true
