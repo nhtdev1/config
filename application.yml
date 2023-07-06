@@ -1,0 +1,16 @@
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: localhost:${server.port}
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka
+      
+logging:        
+  file:
+    name: application.log
+  level:
+    root: INFO
+    org.springframework: INFO
