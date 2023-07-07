@@ -1,41 +1,3 @@
-spring:
-  data:
-    redis:
-      port: '6379'
-      timeout: '30000'
-      host: localhost
-  cache:
-    type: redis
-    redis:
-      time-to-live: '45000'
-      cache-null-values: 'true'
-  cassandra:
-    username: admin
-    password: A13572468!$
-    local-datacenter: datacenter1
-    request:
-      timeout: 10s
-    port: '9042'
-    connection:
-      init-query-timeout: 10s
-      connect-timeout: 10s
-    contact-points: 103.56.156.132
-  main:
-    allow-bean-definition-overriding: 'true'
-  session:
-    store-type: redis
-    redis:
-      namespace: dev
-    properties:
-      hibernate:
-        id:
-          new_generator_mappings: 'true'
-
-server:
-  http2:
-    enabled: true
-app:
-  greeting: Hello from config file on github updated
 eureka:
   client:
     registerWithEureka: true
@@ -45,17 +7,3 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: testlocalhost:${server.port}
-management:
-  tracing:
-    sampling:
-      probability: 1.0
-  endpoints:
-    web:
-      exposure:
-        include: '*'
-logging:        
-  file:
-    name: application.log
-  level:
-    root: INFO
-    org.springframework: INFO
