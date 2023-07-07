@@ -1,9 +1,16 @@
+# eureka:
+#   client:
+#     registerWithEureka: true
+#     fetchRegistry: true
+#     service-url:
+#       defaultZone: http://discovery:8761/eureka
+#   instance:
+#     prefer-ip-address: true
+#     instance-id: testlocalhost:${server.port}
+
 eureka:
   client:
-    registerWithEureka: true
-    fetchRegistry: true
-    service-url:
-      defaultZone: http://discovery:8761/eureka
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8010/eureka}
   instance:
-    prefer-ip-address: true
-    instance-id: testlocalhost:${server.port}
+    preferIpAddress: true
